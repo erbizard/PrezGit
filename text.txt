@@ -8,7 +8,7 @@ Marketplace
 Explore
  @erbizard Sign out
 0
-0 11 erbizard/BotTester
+0 11 
 forked from microsoftly/BotTester
  Code  Pull requests 0  Projects 0  Insights  Settings
 BotTester/src/BotTester.ts
@@ -27,7 +27,7 @@ import { SessionService } from './SessionService';
 
 export type checkSessionFunction = (s: Session) => void;
 //tslint:disable
-type TestStep = () => Promise<any>;
+type TestStep = () =>
 //tslint:enable
 /**
  * methods that the Test builder can call to edit/modify the options. These can be called until any of the IBotTester method are called.
@@ -156,7 +156,7 @@ export class BotTester implements IBotTester, IOptionsModifier {
     public ignoreTypingEvent(): BotTester {
         this.config.ignoreTypingEvent = true;
 
-        return this;
+        return Other
     }
 
     /**
@@ -271,6 +271,6 @@ export class BotTester implements IBotTester, IOptionsModifier {
 
         this.testSteps.push(() => this.messageService.sendMessageToBot(message, expectedMessages, ignoreOrder));
 
-        return this;
+        // return this;
     }
 }
